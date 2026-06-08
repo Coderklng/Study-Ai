@@ -1,0 +1,35 @@
+
+
+.effect{
+   font-weight:500;
+   text-transform:capitalize; 
+   position:relative;
+}
+
+.effect::before{
+  content: "";
+  position:absolute;
+  background-color:blueviolet;
+  width:0%;
+  color:blueviolet;
+  height:3px;
+  transition: width 0.7s linear;
+  bottom:-33px;
+}
+
+.effect:hover::before{
+    width:100%;
+}
+
+.image{
+  background-image:url("https://media.istockphoto.com/id/485289973/photo/romantic-sky-night-for-valentine-background.jpg?b=1&s=612x612&w=0&k=20&c=GavLUStLTJYMPzlg7cH05IIu0ao-4NLEp_jMwpCJ8RY=");
+  border-radius:20px;
+  background-size:cover;
+}
+
+.fusion::-webkit-scrollbar{
+   width:1px;
+   background:#fff;
+   border-radius:12px;
+}
+
