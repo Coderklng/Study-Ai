@@ -22,7 +22,7 @@ const services = [
   {
     title: "PDF Analysis",
     icon: FileText,
-    link:"/pdf",
+    link:"/notes",
     color: "text-green-500",
     border: "hover:border-green-500",
     desc: "Upload study material PDFs and receive summaries, notes, and insights instantly.",
