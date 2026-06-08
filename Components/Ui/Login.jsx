@@ -198,7 +198,7 @@ const LoginUi = () => {
 
                                             <AlertDialog open={open} onOpenChange={setOpen} className="bg-zinc-950">
                                                 <AlertDialogTrigger asChild>
-                                                    <Button variant="outline" className={`w-full ${!visible ? "opacity-0 cursor-not-allowed" : "bg-zinc-950"} bg-zinc-950 p-6 mt-5 rounded-xl text-white`} onClick={submitForm}>Login</Button>
+                                                    <Button variant="outline" className={`w-full ${!visible ? "opacity-50 cursor-not-allowed" : "bg-zinc-950"} bg-zinc-950 p-6 mt-5 rounded-xl text-white`} onClick={submitForm}>Login</Button>
                                                 </AlertDialogTrigger>
                                                 <AlertDialogContent>
                                                     <AlertDialogHeader>

@@ -9,7 +9,7 @@ export default function ProfessionalDashboard() {
   return (
     <div className="flex h-screen bg-zinc-950 text-white font-sans overflow-x-hidden">
       {/* Sidebar - Added shrink-0 to prevent compression */}
-      <aside className="w-64 bg-zinc-900 border-r border-zinc-800 flex flex-col shrink-0">
+      <aside className="hidden w-64 bg-zinc-900 border-r border-zinc-800 md:flex flex-col shrink-0">
         <div className="p-6 text-xl font-black text-indigo-500 tracking-tighter">ATS PRO v1.0</div>
         <nav className="flex-1 px-4 space-y-2 mt-4">
           <NavItem 

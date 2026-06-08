@@ -33,7 +33,7 @@ export default function ProfessionalNotesUI() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 flex font-sans">
       
       {/* --- SIDEBAR --- */}
-      <aside className="w-64 border-r border-zinc-800 bg-zinc-950/50 backdrop-blur-xl hidden md:flex flex-col p-6">
+      <aside className=" w-64 border-r border-zinc-800 bg-zinc-950/50 backdrop-blur-xl hidden md:flex flex-col p-6">
         <div className="flex items-center gap-3 mb-10">
           <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center">
             <BrainCircuit size={20} className="text-white" />

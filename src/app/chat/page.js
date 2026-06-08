@@ -184,7 +184,7 @@ export default function Chat() {
                 className="flex-1 bg-transparent outline-none"
               />
 
-              <button className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-700 hover:bg-violet-600"
+              <button className="flex h-12 w-12 items-center justify-center rounded-full bg-violet-700 hover:bg-violet-600 p-3"
                 onClick={sendMessage}
               >
                 <Send size={18} />
