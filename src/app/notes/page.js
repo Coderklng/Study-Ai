@@ -20,6 +20,7 @@ export default function ProfessionalNotesUI() {
       }, {
         headers: { "Content-Type": "application/json" }
       });
+      console.log(res.data);
       setDownload(res.data.download_url);
     } catch (error) {
       console.error("Error:", error);
