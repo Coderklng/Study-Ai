@@ -7,6 +7,7 @@ import {
   BrainCircuit,
   BookOpen,
   ChartSpline,
+  Code2,
   MessagesSquare,
 } from "lucide-react";
 
@@ -25,7 +26,7 @@ const services = [
   {
     title: "PDF Analysis",
     icon: FileText,
-    link: "/notes",
+    link: "/pdf",
     color: "text-green-500",
     border: "hover:border-green-500",
     desc: "Upload study material PDFs and receive summaries, notes, and insights instantly.",
@@ -61,7 +62,14 @@ const services = [
     color: "text-blue-500",
     border: "hover:border-blue-500",
     desc: "Our AI assistant is always available to support your learning journey.",
-  },
+  },{
+  title: "Code Generation",
+  icon: Code2, // Ensure 'Code2' is imported from your icon library (e.g., lucide-react)
+  link: "/code", // Apna link yahan set kar lena
+  color: "text-purple-500",
+  border: "hover:border-purple-500",
+  desc: "Generate clean, efficient code snippets and solve complex programming problems instantly.",
+}
 ];
 
 const ServicesUi = () => {

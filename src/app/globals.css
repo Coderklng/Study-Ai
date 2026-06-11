@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -138,11 +139,17 @@
   scrollbar-width: none;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+ .scrollbar-hide::-webkit-scrollbar {
     display: none;
     width:0px;
-}
+} 
+
 .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+
+.sidebar::-webkit-scrollbar{
+  width:5px;
 }
