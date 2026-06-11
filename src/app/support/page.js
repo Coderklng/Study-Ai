@@ -12,18 +12,7 @@ export default function ProfessionalDashboard() {
       <aside className="hidden w-64 bg-zinc-900 border-r border-zinc-800 md:flex flex-col shrink-0">
         <div className="p-6 text-xl font-black text-indigo-500 tracking-tighter">ATS PRO v1.0</div>
         <nav className="flex-1 px-4 space-y-2 mt-4">
-          <NavItem 
-            icon={<LayoutDashboard size={18}/>} 
-            label="Dashboard" 
-            active={activeTab === 'dashboard'} 
-            onClick={() => setActiveTab('dashboard')} 
-          />
-          <NavItem 
-            icon={<FileText size={18}/>} 
-            label="Resume Analysis" 
-            active={activeTab === 'analysis'} 
-            onClick={() => setActiveTab('analysis')} 
-          />
+        
           <NavItem 
             icon={<HelpCircle size={18}/>} 
             label="Support Team" 
@@ -35,8 +24,9 @@ export default function ProfessionalDashboard() {
 
       {/* Main Area */}
       <main className="flex-1 p-8 overflow-y-auto">
-        {activeTab === 'support' ? <SupportDashboard /> : <DashboardContent />}
+     <SupportDashboard /> 
       </main>
+      
     </div>
   );
 }
