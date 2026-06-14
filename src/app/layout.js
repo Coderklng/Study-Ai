@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import { ThemeProvider } from "../../Components/context/ThemeContext";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <Script async src="[https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1752210907408525](https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1752210907408525)" crossOrigin="anonymous" strategy="afterInteractive" />
       <body className="min-h-full flex flex-col">
       <ThemeProvider>
         {children}
