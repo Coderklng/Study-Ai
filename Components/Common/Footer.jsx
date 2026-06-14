@@ -57,7 +57,7 @@ const Footer = ()=>{
                     <ul className="flex flex-col gap-3 text-white items-center">
                         <li><Link href="#">About Us</Link></li>
                         <li><Link href="#">Careers</Link></li>
-                        <li><Link href="#">Privacy Policy</Link></li>
+                        <li><Link href="https://www.termsfeed.com/live/4214b57e-197e-4d68-8e8d-339808073bf2">Privacy Policy</Link></li>
                         <li><Link href="#">Terms of Service</Link></li>
                     </ul>     
                 </div>
