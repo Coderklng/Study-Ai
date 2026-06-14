@@ -41,7 +41,7 @@ export default function ChatLayout() {
       {/* Sidebar */}
       <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-gradient-to-l from-zinc-950 to-black border-r border-zinc-800 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 ease-in-out`}>
         <div className="p-12 flex justify-between items-center">
-          <h2 className="font-bold text-xl md:text-3xl  tracking-tight">Flow Ai</h2>
+          <h2 className="font-bold text-xl md:text-3xl tracking-tight">Flow Ai</h2>
           <button onClick={() => setSidebarOpen(false)} className="md:hidden"><X size={20} /></button>
         </div>
         <nav className="px-4">
@@ -51,16 +51,19 @@ export default function ChatLayout() {
         </nav>
       </aside>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col h-full w-full overflow-hidden relative">
-        <header className="h-16  border-b border-zinc-800 flex items-center px-4 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-10 ">
+      {/* Main Content Container */}
+      <div className="flex-1 flex flex-col h-screen w-full overflow-hidden">
+        
+        {/* Header - Fixed at top, shrink-0 prevents it from squishing */}
+        <header className="h-16 border-b border-zinc-800 flex items-center px-4 bg-zinc-950/80 backdrop-blur-md z-10 shrink-0">
           <button onClick={() => setSidebarOpen(true)} className="md:hidden mr-4"><Menu size={24} /></button>
           <h1 className="text-sm md:text-xl font-light md:font-medium">AI Service Dashboard</h1>
         </header>
 
-        <main className="flex-1 overflow-y-auto w-full p-4 md:p-6 space-y-6 sidebar">
+        {/* Scrollable Chat Area */}
+        <main className="flex-1 overflow-y-auto w-full p-4 md:p-6 space-y-6">
           {messages.map((msg, i) => (
-            <div key={i} className={` shadow-lg w-full md:max-w-3xl mx-auto p-4 rounded-xl border ${msg.role === 'user' ? 'bg-gradient-to-b from-zinc-950 to-black border-zinc-800' : 'bg-gradient-to-r from-violet-800 to-blue-900 border-zinc-800'}`}>
+            <div key={i} className={`shadow-lg w-full md:max-w-3xl mx-auto p-4 rounded-xl border ${msg.role === 'user' ? 'bg-gradient-to-b from-zinc-950 to-black border-zinc-800' : 'bg-gradient-to-r from-violet-800 to-blue-900 border-zinc-800'}`}>
               {msg.role === 'user' ? (
                 <p className="text-sm break-words">{msg.content}</p>
               ) : (
@@ -87,7 +90,8 @@ export default function ChatLayout() {
           {loading && <div className="max-w-3xl mx-auto text-zinc-500 text-sm flex gap-2"><Loader2 className="animate-spin" /> Thinking...</div>}
         </main>
 
-        <div className="p-4 bg-gradient-to-l from-bg-zinc-950 to-black border-t border-zinc-800">
+        {/* Footer/Input - Fixed at bottom, shrink-0 prevents it from squishing */}
+        <div className="p-4 bg-zinc-950 border-t border-zinc-800 shrink-0">
           <div className="max-w-3xl mx-auto relative flex items-center">
             <input 
               value={input}
