@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../../Components/context/ThemeContext";
+import Script from "next/script"; // 1. यहाँ Script इंपोर्ट किया
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,17 +24,31 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-       <body className="min-h-full flex flex-col">
-      <ThemeProvider>
-        {children}
-      </ThemeProvider>
+      <head>
+        {/* 2. यहाँ Google Tag का कोड लगाया गया है */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-5LEGSLF69L"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5LEGSLF69L');
+          `}
+        </Script>
+      </head>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
